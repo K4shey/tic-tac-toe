@@ -17,12 +17,47 @@
 
 package academy.devonline.tictactoe.component;
 
+import academy.devonline.tictactoe.model.Cell;
+import academy.devonline.tictactoe.model.GameTable;
+
 public class WinnerCheck {
-    public boolean isUserWin() {
-        return false;
+    public boolean isUserWin(GameTable gameTable) {
+        return haveWinner(gameTable, 'X');
     }
 
-    public boolean isComputerWin() {
+    public boolean isComputerWin(GameTable gameTable) {
+        return haveWinner(gameTable, '0');
+    }
+
+    private boolean haveWinner(GameTable gameTable, char sign) {
+
+        for (int i = 0; i < 3; i++) {
+            if (gameTable.getSign(new Cell(i, 0)) == sign &&
+                    gameTable.getSign(new Cell(i, 1)) == sign &&
+                    gameTable.getSign(new Cell(i, 2)) == sign) {
+                return true;
+            }
+        }
+
+        for (int i = 0; i < 3; i++) {
+            if (gameTable.getSign(new Cell(0, i)) == sign &&
+                    gameTable.getSign(new Cell(1, i)) == sign &&
+                    gameTable.getSign(new Cell(2, i)) == sign) {
+                return true;
+            }
+        }
+
+        if (gameTable.getSign(new Cell(0, 0)) == sign &&
+                gameTable.getSign(new Cell(1, 1)) == sign &&
+                gameTable.getSign(new Cell(2, 2)) == sign) {
+            return true;
+        }
+
+        if (gameTable.getSign(new Cell(0, 2)) == sign &&
+                gameTable.getSign(new Cell(1, 1)) == sign &&
+                gameTable.getSign(new Cell(2, 0)) == sign) {
+            return true;
+        }
         return false;
     }
 }

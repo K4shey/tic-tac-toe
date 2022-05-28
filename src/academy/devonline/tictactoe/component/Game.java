@@ -53,7 +53,7 @@ public class Game {
             usersMove.MakeMove(gameTable);
             screenOutput.DrawGameTable(gameTable);
 
-            if (winnerCheck.isUserWin()) {
+            if (winnerCheck.isUserWin(gameTable)) {
                 System.out.println("YOU WIN!");
                 break;
             } else if (drawCheck.isDraw()) {
@@ -64,7 +64,7 @@ public class Game {
             computersMove.MakeMove(gameTable);
             screenOutput.DrawGameTable(gameTable);
 
-            if (winnerCheck.isComputerWin()) {
+            if (winnerCheck.isComputerWin(gameTable)) {
                 System.out.println("COMPUTER WIN!");
                 break;
             } else if (drawCheck.isDraw()) {
