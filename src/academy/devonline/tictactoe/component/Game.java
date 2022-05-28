@@ -42,6 +42,7 @@ public class Game {
 
     public void play() {
         final GameTable gameTable = new GameTable();
+        System.out.println("Use the following mapping table to specify a cell using numbers from 1 to 9:");
         screenOutput.DrawMappingTable();
         if (new Random().nextBoolean()) {
             computersMove.MakeMove(gameTable);

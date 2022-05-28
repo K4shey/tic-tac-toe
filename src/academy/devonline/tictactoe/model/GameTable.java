@@ -49,7 +49,6 @@ public class GameTable {
                 sb.append(";");
             }
         }
-
         sb.append('}');
         return sb.toString();
     }
