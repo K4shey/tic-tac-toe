@@ -17,9 +17,23 @@
 
 package academy.devonline.tictactoe.component;
 
+import academy.devonline.tictactoe.model.Cell;
 import academy.devonline.tictactoe.model.GameTable;
+
+import java.util.Random;
 
 public class ComputersMove {
     public void MakeMove(GameTable gameTable) {
+
+        int row = new Random().nextInt(3);
+        int col = new Random().nextInt(3);
+        Cell newCell = new Cell(row, col);
+        while (!gameTable.isEmpty(newCell)) {
+            row = new Random().nextInt(3);
+            col = new Random().nextInt(3);
+            newCell = new Cell(row, col);
+        }
+        gameTable.setSign(newCell, '0');
+
     }
 }
