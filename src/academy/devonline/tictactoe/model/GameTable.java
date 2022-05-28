@@ -15,7 +15,27 @@
  *
  */
 
-package academy.devonline.tictactoe;
+package academy.devonline.tictactoe.model;
 
 public class GameTable {
+
+    private final char[][] table = {
+            {' ', ' ', ' '},
+            {' ', ' ', ' '},
+            {' ', ' ', ' '}
+    };
+
+    public boolean isEmpty(Cell cell) {
+        return table[cell.getRow()][cell.getCol()] == ' ';
+    }
+
+    public char getSign(Cell cell) {
+        return table[cell.getRow()][cell.getCol()];
+    }
+
+    public void setSign(Cell cell, char sign) {
+        table[cell.getRow()][cell.getCol()] = sign;
+    }
+
+
 }

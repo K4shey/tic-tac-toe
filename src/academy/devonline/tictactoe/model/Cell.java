@@ -15,12 +15,22 @@
  *
  */
 
-package academy.devonline.tictactoe;
+package academy.devonline.tictactoe.model;
 
-public class ScreenOutput {
-    public void DrawMappingTable() {
+public class Cell {
+    private final int row;
+    private final int col;
+
+    public Cell(int row, int col) {
+        this.row = row;
+        this.col = col;
     }
 
-    public void DrawGameTable(GameTable gameTable) {
+    public int getRow() {
+        return row;
+    }
+
+    public int getCol() {
+        return col;
     }
 }

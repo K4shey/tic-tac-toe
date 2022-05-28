@@ -15,10 +15,14 @@
  *
  */
 
-package academy.devonline.tictactoe;
+package academy.devonline.tictactoe.component;
 
-public class DrawCheck {
-    public boolean isDraw() {
-        return false;
+import academy.devonline.tictactoe.model.GameTable;
+
+public class ScreenOutput {
+    public void DrawMappingTable() {
+    }
+
+    public void DrawGameTable(GameTable gameTable) {
     }
 }

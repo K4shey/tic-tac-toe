@@ -15,14 +15,10 @@
  *
  */
 
-package academy.devonline.tictactoe;
+package academy.devonline.tictactoe.component;
 
-import academy.devonline.tictactoe.component.*;
-
-public class Launcher {
-    public static void main(String[] args) {
-        final Game game = new Game(new ScreenOutput(),
-                new ComputersMove(), new UsersMove(), new WinnerCheck(), new DrawCheck());
-        game.play();
+public class DrawCheck {
+    public boolean isDraw() {
+        return false;
     }
 }

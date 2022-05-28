@@ -15,9 +15,11 @@
  *
  */
 
-package academy.devonline.tictactoe;
+package academy.devonline.tictactoe.component;
 
-public class UsersMove {
+import academy.devonline.tictactoe.model.GameTable;
+
+public class ComputersMove {
     public void MakeMove(GameTable gameTable) {
     }
 }

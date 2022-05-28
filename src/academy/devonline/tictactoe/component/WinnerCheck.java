@@ -15,9 +15,14 @@
  *
  */
 
-package academy.devonline.tictactoe;
+package academy.devonline.tictactoe.component;
 
-public class ComputersMove {
-    public void MakeMove(GameTable gameTable) {
+public class WinnerCheck {
+    public boolean isUserWin() {
+        return false;
+    }
+
+    public boolean isComputerWin() {
+        return false;
     }
 }

@@ -15,14 +15,11 @@
  *
  */
 
-package academy.devonline.tictactoe;
+package academy.devonline.tictactoe.component;
 
-public class WinnerCheck {
-    public boolean isUserWin() {
-        return false;
-    }
+import academy.devonline.tictactoe.model.GameTable;
 
-    public boolean isComputerWin() {
-        return false;
+public class UsersMove {
+    public void MakeMove(GameTable gameTable) {
     }
 }
