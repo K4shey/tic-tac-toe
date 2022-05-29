@@ -17,8 +17,19 @@
 
 package academy.devonline.tictactoe.component;
 
-public class DrawCheck {
-    public boolean isDraw() {
-        return false;
+import academy.devonline.tictactoe.model.Cell;
+import academy.devonline.tictactoe.model.GameTable;
+
+public class CellsCheck {
+    public boolean isAllCellsFilled(GameTable gameTable) {
+        int count = 0;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (gameTable.isEmpty(new Cell(i, j))) {
+                    count++;
+                }
+            }
+        }
+        return count == 0;
     }
 }

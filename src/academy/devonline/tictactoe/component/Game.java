@@ -26,18 +26,18 @@ public class Game {
     private final ComputersMove computersMove;
     private final UsersMove usersMove;
     private final WinnerCheck winnerCheck;
-    private final DrawCheck drawCheck;
+    private final CellsCheck cellsCheck;
 
     public Game(ScreenOutput screenOutput,
                 ComputersMove computersMove,
                 UsersMove usersMove,
                 WinnerCheck winnerCheck,
-                DrawCheck drawCheck) {
+                CellsCheck drawCheck) {
         this.screenOutput = screenOutput;
         this.computersMove = computersMove;
         this.usersMove = usersMove;
         this.winnerCheck = winnerCheck;
-        this.drawCheck = drawCheck;
+        this.cellsCheck = drawCheck;
     }
 
     public void play() {
@@ -56,7 +56,7 @@ public class Game {
             if (winnerCheck.isUserWin(gameTable)) {
                 System.out.println("YOU WIN!");
                 break;
-            } else if (drawCheck.isDraw()) {
+            } else if (cellsCheck.isAllCellsFilled(gameTable)) {
                 System.out.println("DRAW!");
                 break;
             }
@@ -67,7 +67,7 @@ public class Game {
             if (winnerCheck.isComputerWin(gameTable)) {
                 System.out.println("COMPUTER WIN!");
                 break;
-            } else if (drawCheck.isDraw()) {
+            } else if (cellsCheck.isAllCellsFilled(gameTable)) {
                 System.out.println("DRAW!");
                 break;
             }
