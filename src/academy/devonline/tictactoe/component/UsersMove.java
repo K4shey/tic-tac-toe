@@ -23,6 +23,13 @@ import academy.devonline.tictactoe.model.GameTable;
 import java.util.Scanner;
 
 public class UsersMove {
+
+    private final CellNumberConverter cellNumberConverter;
+
+    public UsersMove(CellNumberConverter cellNumberConverter) {
+        this.cellNumberConverter = cellNumberConverter;
+    }
+
     public void MakeMove(GameTable gameTable) {
 
         Cell cell = null;
@@ -35,32 +42,12 @@ public class UsersMove {
                     cellNumber = scanner.nextInt();
                 }
             }
-            cell = getCellByNumber(cellNumber);
+            cell = cellNumberConverter.getCellByNumber(cellNumber);
             if (gameTable.isEmpty(cell)) {
                 break;
             }
             System.out.println("Can't make a move, because the cell is not free! Try again!");
         }
         gameTable.setSign(cell, 'X');
-    }
-
-    private Cell getCellByNumber(int number) {
-
-        Cell result = null;
-        int[][] mappingTable = {
-                {7, 8, 9},
-                {4, 5, 6},
-                {1, 2, 3},
-        };
-
-        for (int i = 0; i < mappingTable.length; i++) {
-            for (int j = 0; j < mappingTable.length; j++) {
-                if (mappingTable[i][j] == number) {
-                    result = new Cell(i, j);
-                    break;
-                }
-            }
-        }
-        return result;
     }
 }
