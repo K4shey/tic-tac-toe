@@ -18,10 +18,11 @@
 package academy.devonline.tictactoe;
 
 import academy.devonline.tictactoe.component.*;
+import academy.devonline.tictactoe.kepad.DesktopNumericKeypadCellNumberConverter;
 
 public class Launcher {
     public static void main(String[] args) {
-        final CellNumberConverter cellNumberConverter = new CellNumberConverter();
+        final CellNumberConverter cellNumberConverter = new DesktopNumericKeypadCellNumberConverter();
         final Game game = new Game(new ScreenOutput(cellNumberConverter),
                 new ComputersMove(),
                 new UsersMove(cellNumberConverter),

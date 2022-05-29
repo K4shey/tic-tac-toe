@@ -19,29 +19,9 @@ package academy.devonline.tictactoe.component;
 
 import academy.devonline.tictactoe.model.Cell;
 
-public class CellNumberConverter {
+public interface CellNumberConverter {
 
-    private char[][] mappingTable = {
-            {7, 8, 9},
-            {4, 5, 6},
-            {1, 2, 3},
-    };
+  Cell getCellByNumber(int number);
 
-    public Cell getCellByNumber(int number) {
-        Cell result = null;
-
-        for (int i = 0; i < mappingTable.length; i++) {
-            for (int j = 0; j < mappingTable.length; j++) {
-                if (mappingTable[i][j] == number) {
-                    result = new Cell(i, j);
-                    break;
-                }
-            }
-        }
-        return result;
-    }
-
-    public char getCharByCell(Cell cell) {
-        return Character.forDigit(mappingTable[cell.getRow()][cell.getCol()], 10);
-    }
+  char getCharByCell(Cell cell);
 }
