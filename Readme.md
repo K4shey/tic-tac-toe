@@ -1,18 +1,12 @@
-# The ${project.name} Project
+# tic-tac-toe-console
 
------------------------------------------------------------------------------------
+This is a basic tic-tac-toe game written in Java. You can play this game with your computer (CPU).
 
-## Build instructions
+## This is the project README file:
+---
 
-TODO
+PROJECT TITLE: Tic Tac Toe
 
-## Run instructions
+PURPOSE OF PROJECT: A Tic Tac Toe Game
 
-TODO
-
------------------------------------------------------------------------------------
-
-## Readme tutorial
-
-- https://guides.github.com/features/mastering-markdown/
-- https://help.github.com/categories/writing-on-github/
+VERSION: v1.0
